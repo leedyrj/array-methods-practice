@@ -254,11 +254,10 @@ const customers = {
 
 
 
-for (let key in customers) {
-    console.log(customers[key]);
-    for (let i=0; i<key.length; i++) {
-        console.log(customers[key][i]);
-        for (let contacts in customers[key][i])
-        console.log(customers[key][i][contacts]);
-    }
-}
+
+let newArray = []
+const array = customers.customers.forEach(element => {
+  let email = element.contacts.email
+  newArray = newArray.concat(email)
+  })
+console.log(newArray);
